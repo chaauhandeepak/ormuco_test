@@ -14,17 +14,17 @@ class Rect(object):
         self.top    = max(p1.y, p2.y)
 
 def overlap(r1,r2):
-    '''Overlapping---  overlap both horizontally & vertically
+    '''Overlapping--- to check-- overlap both horizontally & vertically
     '''
-    hoverlaps = True
-    voverlaps = True
-    if (r1.left > r2.right) or (r1.right < r2.left):
+    hoverlaps = True ##boolean values
+    voverlaps = True  
+    if (r1.left > r2.right) or (r1.right < r2.left): ##putting conditions
         hoverlaps = False
-    if (r1.top < r2.bottom) or (r1.bottom > r2.top):
+    if (r1.top < r2.bottom) or (r1.bottom > r2.top): 
         voverlaps = False
     return hoverlaps and voverlaps
 
-if __name__ == '__main__':
+if __name__ == '__main__': 
     p1 = Point(1,1)
     p2 = Point(3,3)
     r1 = Rect(p1,p2)
@@ -32,7 +32,7 @@ if __name__ == '__main__':
     p4 = Point(4,4)
     r2 = Rect(p3,p4)
 
-    print ("r1 (red),r2 (aqua): Overlap in either direction:")
+    print ("r1 ,r2 : Overlap in either direction:")
     print (overlap(r1,r2))
     print (overlap(r2,r1))
 
@@ -40,11 +40,11 @@ if __name__ == '__main__':
     p6 = Point(12,11)
     r3 = Rect(p5,p6)
 
-    print ("r1 (red),r3 (blue): Should not overlap, either way:")
+    print ("r1,r3 : Should not overlap, either way:")
     print (overlap(r1,r3))
     print (overlap(r3,r1))
 
-    print ("r2 (aqua),r3 (blue: Same as that")
+    print ("r2 ,r3 : Same as that")
     print (overlap(r2,r3))
     print (overlap(r3,r2))
 
@@ -52,11 +52,11 @@ if __name__ == '__main__':
     p8 = Point(11,10)
     r4 = Rect(p7,p8)    # completely inside r3
 
-    print ("r4 (fuschia) is totally enclosed in r3 (blue)")
+    print ("r4 is totally enclosed in r3 ")
     print (overlap(r3,r4))
     print (overlap(r4,r3))
 
-    print ("r4 (fuschia) is nowhere near r1 (red) nor r2 (aqua)")
+    print ("r4  is nowhere near r1  nor r2 ")
     print (overlap(r1,r4))
 
     p09 = Point(13,11)
@@ -67,6 +67,6 @@ if __name__ == '__main__':
     p12 = Point(15,14)
     r6  = Rect(p11,p12)
 
-    print ("r5 (green) and r6 (yellow) cross without corner overlap")
+    print ("r5 and r6 cross without corner overlap")
     print (overlap(r5,r6))
     print (overlap(r6,r5))
