@@ -1,6 +1,6 @@
-x=int(input())
+x=int(input())  ## console inputs for x and y
 y=int(input())
-def greaterthan_func():
+def greaterthan_func():   ## defining function to put conditions
 
     if x>y:
         print(x)
