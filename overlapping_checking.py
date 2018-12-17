@@ -34,7 +34,7 @@ if __name__ == '__main__':
 
     print ("r1 ,r2 : Overlap in either direction:")
     print (overlap(r1,r2))
-    print (overlap(r2,r1))
+    print (overlap(r2,r1)) 
 
     p5 = Point(3,6)     # overlaps horizontally but not vertically
     p6 = Point(12,11)
